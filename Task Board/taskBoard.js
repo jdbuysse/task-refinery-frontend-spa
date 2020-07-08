@@ -4,15 +4,16 @@ import * as taskEdit from "../Task DeleteEdit/taskEdit.js"
 
 const subtaskList = document.querySelector('#task-list')
 
-const challengeHeader = document.querySelector('#challenge-header')
 const taskName = document.querySelector('#task-name')
 
 //renders an array of subtask objects
 function renderSubtasks(subtasks) {
+    console.log(subtasks)
     subtasks.forEach(subtask => {
         renderSubtask(subtask)
     })
 }
+
 
 //takes single task obj
 function renderSubtask(subtask) {

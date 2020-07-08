@@ -9,29 +9,48 @@
 </head>
 
 <body>
+    <header class="hide" id="start-menu">
+        <div class="menu-toggle" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="overlay"></div>
+        <div class="container">
+            <nav>
+                <h1 class="brand"><a href="index.html">Task Refinery</h1>
+                <ul>
+                    <li><a href="index.html#challenge-header">New Board</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">My Boards</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <section id="hero">
+    <header class="hide" id="hero"> 
+        <!-- why isn't this hiding? have to do a lot of css disentangling bc header tags and stuff are conflicting/being over written-->
         <h1>Task Refinery</h1>
         <div class='login'>
             <a href='/login.html'>Log in</a>
         </div>
         <div class="call-to-action">
-            <a href='#challenge-header'>Quickstart</a>
+            <a href='#start'>Quickstart</a>
         </div>
-        <h1>Create Account</h1>
+    </header>
+
+        <h2>Create Account</h2>
         <p id='create-account-message'></p>
         <form id='create-account'>
             <input name="username" type="text" />
             <input name="password" type="password" />
             <button type="submit">Create</button>
         </form>
-        <h1>Log the heck in!</h1>
+        <h2>Log the heck in!</h2>
         <form id='login'>
             <input name="username" type="text" />
             <input name="password" type="password" />
             <button type="submit">Log in</button>
         </form>
-    </section>
+    
     <section id='challenge-header'>
         
         <form id='task-input-form'>
@@ -55,7 +74,7 @@
                 <div class='c2' data-draggable="target">
                     <h3>column two</h3>
                     <ul>
-                        <li data-draggable="item">static task2</li>
+                        
                     </ul>
                 </div>
             </div>
@@ -63,7 +82,7 @@
                 <div class='c3' data-draggable="target">
                     <h3>column three</h3>
                     <ul>
-                        <li data-draggable="item">static task3</li>
+                        
                     </ul>
                 </div>
             </div>

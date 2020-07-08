@@ -1,4 +1,7 @@
+const taskStorageArray = []
+
 function populateStorage(tasks) {
+    taskStorageArray = []
     tasks.forEach(task => {
         taskStorageArray.push(task)
     })
@@ -10,3 +13,5 @@ function populateStorage(tasks) {
 function retrieveStorage(){
     return JSON.parse(localStorage.getItem("tasks") || "[]")
 }
+
+export {populateStorage, retrieveStorage}
