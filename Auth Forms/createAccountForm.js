@@ -32,7 +32,7 @@ function createAccountFetch(username, password){
 function accountCreated(result){
     if (result.id != undefined) {
         accountCreatedMessage.textContent = `Welcome, ${result.username}, your account has
-        been successfully created`
+        been successfully created. Please log in.`
         localStorage.setItem("user_id", result.id)
     }
     else {

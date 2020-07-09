@@ -3,6 +3,7 @@ import * as dragging from "../Dragging/dragging.js"
 import * as submissionForm from "../Task Submission Form/submissionForm.js"
 import * as login from "../Auth Forms/loginForm.js"
 import * as createAccount from "../Auth Forms/createAccountForm.js"
+import * as taskBoard from "../Task Board/taskBoard.js"
 
 //let tasksURL = `http://localhost:8001/tasks/`
 const userID = localStorage.getItem("user_id")
@@ -12,13 +13,17 @@ const taskName = document.querySelector('#task-name')
 const loginForm = document.querySelector('#login')
 const createAccountForm = document.querySelector('#create-account')
 const taskInput = document.querySelector('#task-input-form')
+const clear = document.querySelector('#clear-board')
+const save = document.querySelector('#save-board')
+const saveSubtasks = document.querySelector('#save-board-subtasks')
 
-
-//stopped before implementing create account
 taskInput.addEventListener('submit', (event) => submissionForm.captureFormEvent(event))
 loginForm.addEventListener("submit", login.handleLogin)
 createAccountForm.addEventListener("submit", createAccount.createAccount)
 
+clear.addEventListener("click", taskBoard.clearTasks)
+save.addEventListener("click", taskBoard.saveBoard)
+saveSubtasks.addEventListener("click", taskBoard.saveBoardSubtasks)
 const routes = {
     '/': homePage,
     'start': start
@@ -63,10 +68,10 @@ function fetchTasks() {
     .then(dragging.makeDraggable())
 }
 
-
 function handleData(data){
     taskSelection.createTaskDropdown(data.tasks)
 }
+
 
 
 window.addEventListener('hashchange', router)

@@ -29,7 +29,7 @@
     <div class="show" id="hero"> 
         <h1>Task Refinery</h1>
         <div class='login'>
-            <a href='/login.html'>Log in</a>
+            <a href='#login'>Log in</a>
         </div>
         <div class="call-to-action">
             <a href='#start'>Quickstart</a>
@@ -53,6 +53,7 @@
     <section id='challenge-header'>
         
         <form id='task-input-form'>
+            <input id='task-name-input' name='task-title'></textarea>
             <textarea id="task-input" class="input-box" name='tasks'></textarea>
             <input type='submit' />
         </form>
@@ -60,6 +61,11 @@
         <h2 id='task-name'>No Task Selected</h2>
     </section>
 
+    <section id='board-save-clear'>
+        <h2 id="save-board">Save Task</h2>
+        <h2 id='save-board-subtasks'>Save Subtasks</h2>
+        <h2 id="clear-board">Clear board</h2>
+    </section>
     <section id='test-columns'>
         <div class='row'>
             <div class='column'>

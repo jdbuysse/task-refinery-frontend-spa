@@ -2,7 +2,7 @@ import * as taskBoard from "../Task Board/taskBoard.js"
 import * as storage from "../LocalStorage/localStorage.js"
 
 const taskInput = document.querySelector('#task-input-form')
-
+const taskName = document.querySelector('#task-name')
 
 //taskInput.addEventListener('submit', (event) => captureFormEvent(event))
 
@@ -11,10 +11,12 @@ function captureFormEvent(event){
     event.preventDefault()
     const formData = new FormData(taskInput)
     const newTasks = formData.get('tasks')
+    const taskNameInput = formData.get('task-title')
     let taskObj = formatTaskList(newTasks)
     //storage.populateStorage(taskObj) store object on 'save' rather than submit
-    console.log('str',taskObj)
     taskBoard.renderSubtasks(taskObj)
+    console.log('i', taskNameInput)
+    taskName.textContent = taskNameInput
 }
 
 function formatTaskList(text){

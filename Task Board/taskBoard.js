@@ -1,6 +1,6 @@
 import * as taskDelete from "../Task DeleteEdit/taskDelete.js"
 import * as taskEdit from "../Task DeleteEdit/taskEdit.js"
-
+import * as create from "../CRUD/create.js"
 
 const subtaskList = document.querySelector('#task-list')
 
@@ -31,6 +31,7 @@ function renderSubtask(subtask) {
 
 function clearTasks(){
     subtaskList.innerHTML = ``
+    taskName.innerHTML = ``
 }
 
 function addTaskName(name){
@@ -49,17 +50,25 @@ function newBoard(){
 
 
 function saveBoard(){
-    let subtasks = Array.from(subtaskList.children).map(item => {
-        return item.innerText
-    })
+
     if (localStorage.getItem("selected_task") === "0") {
-        saveNewTask(subtasks) //this will go in CRUD folder
+        //console.log("saving new task", taskName.textContent)
+        create.saveNewTask(taskName.textContent) //this will go in CRUD folder
+        
     }
     else {
         updateExistingTask(subtasks) //this goes in CRUD folder
     }
 }
 
+function saveBoardSubtasks(){
+    console.log('saving subtasks')
+    let subtasks = Array.from(subtaskList.children).map(item => {
+        return item.innerText.slice(0, -5)
+    })
+    create.persistSubtasks(subtasks)
+}
+
 
 export {renderSubtask, renderSubtasks, saveBoard, newBoard, 
-    addSubtasks, addTaskName, clearTasks}
+    addSubtasks, addTaskName, clearTasks, saveBoardSubtasks}

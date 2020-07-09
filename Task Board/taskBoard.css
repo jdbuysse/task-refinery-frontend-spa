@@ -1,13 +1,20 @@
-#save-board{
-    position: absolute;
-    top: 200px;
-    right: 250px;
+#board-save-clear{
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    justify-content: right;
+    /* padding-right: 50px; */
 }
 
-#clear-board {
-    position: absolute;
-    top: 200px;
-    right: 75px;
+#save-board{
+    padding-right: 10px;
+}
+
+#clear-board{
+    padding-right: 10px;
+}
+#save-board-subtasks{
+    padding-right: 10px;
 }
 
 .row {

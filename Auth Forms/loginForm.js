@@ -26,6 +26,7 @@ function sendFetch(username, password){
         localStorage.setItem("user_id", parseJwt(result.access).user_id)
         localStorage.setItem("token", result.access)
         localStorage.setItem("username", username)
+        localStorage.setItem("selected_task", 0)
         window.location.replace("http://localhost:3000#start")
     })
     .catch(error => console.log('error', error));
