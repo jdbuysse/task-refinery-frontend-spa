@@ -71,10 +71,8 @@ body {
     background-color: rgba(248, 248, 248, 0.822);
 }
 
-.hero {
+#hero {
     height: 90vh;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: 
@@ -89,9 +87,6 @@ h1 {
     left: 16px;
 }
 
-h2 {
-    /* display: none */
-}
 
 h3 {
     padding-bottom: 5%;
@@ -106,11 +101,13 @@ h3 {
 .call-to-action {
     display: flex;
     flex-direction: column;
-    align-items: center;
+	align-items: center;
 }
 
 .call-to-action > a {
-    padding: 24px 32px;
+
+	padding: 24px 32px;
+	margin-top: 40vh;
     background-color: hsl(335, 99%, 50%);
     box-shadow: 0 2px 2px hsl(335, 40%, 20%);
     text-decoration: none;
@@ -134,9 +131,7 @@ a{
 }
 
 /*these need to be switched to flex*/
-
-/*the header tag here is overriding what I want*/
-header{ 
+#start-menu{ 
 	width: 100%;
 	height: 22vh;
     background: linear-gradient(to bottom,
@@ -153,6 +148,7 @@ header{
 }
 
 .hide{
+	
     display: none;
     visibility: hidden;
 }
