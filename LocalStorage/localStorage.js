@@ -1,4 +1,4 @@
-const taskStorageArray = []
+let taskStorageArray = []
 
 function populateStorage(tasks) {
     taskStorageArray = []

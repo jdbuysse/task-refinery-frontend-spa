@@ -8,7 +8,6 @@ const taskName = document.querySelector('#task-name')
 
 //renders an array of subtask objects
 function renderSubtasks(subtasks) {
-    console.log(subtasks)
     subtasks.forEach(subtask => {
         renderSubtask(subtask)
     })
@@ -17,12 +16,13 @@ function renderSubtasks(subtasks) {
 
 //takes single task obj
 function renderSubtask(subtask) {
+    console.log('subtask', subtask)
     const li = document.createElement('li')
     li.innerText = subtask.content
     li.setAttribute('task-id', '1') //dummy value for now
     li.setAttribute('data-draggable', 'item')
     li.setAttribute('draggable', 'true')
-    li.textContent = subtask.content
+    //li.textContent = subtask.content
     taskDelete.addTaskDeleteButton(li, subtask)
     taskEdit.addTaskEditButton(li)
     subtaskList.append(li)

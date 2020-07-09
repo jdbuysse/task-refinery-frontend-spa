@@ -1,13 +1,4 @@
-const createAccountForm = document.querySelector('#create-account')
 const accountCreatedMessage = document.querySelector('#create-account-message')
-
-
-
-createAccountForm.addEventListener("submit", createAccount)
-
-
-
-
 
 function createAccount(event){
     event.preventDefault()
@@ -17,9 +8,6 @@ function createAccount(event){
     createAccountFetch(username,password)
     event.target.reset()
 }
-
-
-
 
 function createAccountFetch(username, password){
     let myHeaders = new Headers();
@@ -53,4 +41,4 @@ function accountCreated(result){
     
 }
 
-
+export {createAccount}

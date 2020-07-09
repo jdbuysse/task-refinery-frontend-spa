@@ -3,7 +3,8 @@ import * as storage from "../LocalStorage/localStorage.js"
 
 const taskInput = document.querySelector('#task-input-form')
 
-taskInput.addEventListener('submit', (event) => captureFormEvent(event))
+
+//taskInput.addEventListener('submit', (event) => captureFormEvent(event))
 
 
 function captureFormEvent(event){
@@ -11,8 +12,8 @@ function captureFormEvent(event){
     const formData = new FormData(taskInput)
     const newTasks = formData.get('tasks')
     let taskObj = formatTaskList(newTasks)
-    //console.log('tobj',taskObj)
-    storage.populateStorage(taskObj)
+    //storage.populateStorage(taskObj) store object on 'save' rather than submit
+    console.log('str',taskObj)
     taskBoard.renderSubtasks(taskObj)
 }
 
@@ -26,4 +27,4 @@ function formatTaskList(text){
     })
 }
 
-export {captureFormEvent}
+export {captureFormEvent, formatTaskList}

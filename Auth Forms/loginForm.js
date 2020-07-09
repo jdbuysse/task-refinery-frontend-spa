@@ -1,7 +1,3 @@
-const loginForm = document.querySelector('#login')
-
-
-loginForm.addEventListener("submit", handleLogin)
 
 
 function handleLogin(event){
@@ -24,13 +20,13 @@ function sendFetch(username, password){
       redirect: 'follow'
     };
 
-    fetch("http://127.0.0.1:8001/login/", requestOptions)
+    fetch("http://127.0.0.1:8000/login/", requestOptions)
     .then(response => response.json())
     .then(result => {
         localStorage.setItem("user_id", parseJwt(result.access).user_id)
         localStorage.setItem("token", result.access)
         localStorage.setItem("username", username)
-        window.location.replace("http://localhost:3000/")
+        window.location.replace("http://localhost:3000#start")
     })
     .catch(error => console.log('error', error));
 }
@@ -43,3 +39,5 @@ function parseJwt(token){
     }).join(''))
     return JSON.parse(jsonPayload)
 }
+
+export {handleLogin}
