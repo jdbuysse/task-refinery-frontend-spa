@@ -15,6 +15,9 @@ function selector(event){
 
 
 function createTaskDropdown(tasks){
+    let option = document.createElement('option')
+    option.innerText = "Select a task to start"
+    taskDropdown.appendChild(option)
     tasks.forEach(task => {
         let option = document.createElement('option')
         option.innerText = task.title

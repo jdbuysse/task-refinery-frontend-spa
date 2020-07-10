@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
 @import "../Task Board/taskBoard.css";
+@import "../Auth Forms/authForms.css";
+@import "../Task\ Submission\ Form/submissionForm.css";
+@import "../Task\ Selection/taskSelection.css";
 
 /* overwriting the browser styles */
 /* http://meyerweb.com/eric/tools/css/reset/ 

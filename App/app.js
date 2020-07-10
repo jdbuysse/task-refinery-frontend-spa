@@ -10,23 +10,30 @@ const userID = localStorage.getItem("user_id")
 const hero = document.querySelector('#hero')
 const startHeader = document.querySelector('#start-menu')
 const taskName = document.querySelector('#task-name')
-const loginForm = document.querySelector('#login')
+const loginForm = document.querySelector('#login-div')
 const createAccountForm = document.querySelector('#create-account')
 const taskInput = document.querySelector('#task-input-form')
 const clear = document.querySelector('#clear-board')
 const save = document.querySelector('#save-board')
 const saveSubtasks = document.querySelector('#save-board-subtasks')
+const myBoards = document.querySelector('#my-boards')
+const createAccountDiv= document.querySelector('#create-account-div')
+const boardToggle = document.querySelector('#challenge-header')
 
 taskInput.addEventListener('submit', (event) => submissionForm.captureFormEvent(event))
 loginForm.addEventListener("submit", login.handleLogin)
 createAccountForm.addEventListener("submit", createAccount.createAccount)
 
 clear.addEventListener("click", taskBoard.clearTasks)
+
+
 save.addEventListener("click", taskBoard.saveBoard)
 saveSubtasks.addEventListener("click", taskBoard.saveBoardSubtasks)
 const routes = {
     '/': homePage,
-    'start': start
+    'start': start,
+    'login' : loginRoute,
+    'board' : boardRoute
 }
 
 if (userID){
@@ -34,19 +41,28 @@ if (userID){
 }
 else{
     taskName.innerText = "You don't have any tasks yet"
-
+    myBoards.innerHTML = `<a href='#login'>Login/Create Account</a>`
 }
 
 function homePage(){
-    console.log('home')
     startHeader.className = "hide"
     hero.className = "show"
 }
 
 function start(){
-    console.log('start')
     hero.className = "hide"
     startHeader.className = "show"
+}
+
+function loginRoute(){
+    loginForm.className ="show"
+    createAccountDiv.className = "show"
+}
+
+function boardRoute(){
+    //there's not a quick way to toggle with the routes approach
+    boardToggle.className = "show"
+    
 }
 
 function router(event){

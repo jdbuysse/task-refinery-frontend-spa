@@ -1,0 +1,13 @@
+#login-div {
+    display: flex;
+    padding-top: 20px;
+    justify-content: right;
+    width: 95%;
+}
+
+#create-account-div {
+    display: flex;
+    padding-top: 20px;
+    justify-content: right;
+    width: 95%;
+}

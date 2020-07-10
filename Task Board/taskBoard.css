@@ -6,15 +6,52 @@
     /* padding-right: 50px; */
 }
 
+#task-name{
+    padding-top: 30px;
+    font-weight: 450;
+    font-size: 32px;
+}
+
 #save-board{
     padding-right: 10px;
+    margin: 10px;
+    padding: 24px 32px;
+    background-color: hsl(330, 2%, 34%);
+    box-shadow: 0 2px 2px hsla(320, 2%, 34%, 0.178);
+    text-decoration: none;
+    color: hsl(335, 99%, 95%);;
+    font-weight: 450;
+    font-size: 12px;
+    transition: transform .2s;
+    border-radius: 25px;
 }
 
 #clear-board{
+
     padding-right: 10px;
+    margin: 10px;
+    padding: 24px 32px;
+    background-color: hsl(330, 2%, 34%);
+    box-shadow: 0 2px 2px hsla(320, 2%, 34%, 0.178);
+    text-decoration: none;
+    color: hsl(335, 99%, 95%);;
+    font-weight: 450;
+    font-size: 12px;
+    transition: transform .2s;
+    border-radius: 25px;
 }
 #save-board-subtasks{
     padding-right: 10px;
+    margin: 10px;
+    padding: 24px 32px;
+    background-color: hsl(330, 2%, 34%);
+    box-shadow: 0 2px 2px hsla(320, 2%, 34%, 0.178);
+    text-decoration: none;
+    color: hsl(335, 99%, 95%);;
+    font-weight: 450;
+    font-size: 12px;
+    transition: transform .2s;
+    border-radius: 25px;
 }
 
 .row {

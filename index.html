@@ -18,9 +18,9 @@
             <nav>
                 <h1 class="brand"><a href="index.html">Task Refinery</h1>
                 <ul>
-                    <li><a href="index.html#challenge-header">New Board</a></li>
+                    <li><a href="#board">New Board</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">My Boards</a></li>
+                    <li><a href="#" id="my-boards">My Boards</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,32 +35,36 @@
             <a href='#start'>Quickstart</a>
         </div>
     </div>
-
-        <h2>Create Account</h2>
-        <p id='create-account-message'></p>
-        <form id='create-account'>
-            <input name="username" type="text" />
-            <input name="password" type="password" />
-            <button type="submit">Create</button>
-        </form>
-        <h2>Log the heck in!</h2>
-        <form id='login'>
-            <input name="username" type="text" />
-            <input name="password" type="password" />
-            <button type="submit">Log in</button>
-        </form>
+        <div id='create-account-div' class="hide">
+            <h2>Create Account</h2>
+            <p id='create-account-message'></p>
+            <form id='create-account'>
+                <input name="username" type="text" />
+                <input name="password" type="password" />
+                <button type="submit">Create</button>
+            </form>
+        </div>
+        <div id='login-div' class="hide">
+            <h2>Log the heck in!</h2>
+            <form id='login-form'>
+                <input name="username" type="text" />
+                <input name="password" type="password" />
+                <button type="submit">Log in</button>
+            </form>
+        </div>
     
-    <section id='challenge-header'>
+    <div id='challenge-header' class="hide">
         
         <form id='task-input-form'>
-            <input id='task-name-input' name='task-title'></textarea>
-            <textarea id="task-input" class="input-box" name='tasks'></textarea>
-            <input type='submit' />
+            <input id='task-name-input' name='task-title' placeholder="task name"></textarea>
+            <br/>
+            <textarea id="task-input" class="input-box" name='tasks' placeholder='tasks'></textarea>
+            <input type='submit'/>
         </form>
-        <select id="task-select" name="tasks"></select>
-        <h2 id='task-name'>No Task Selected</h2>
-    </section>
-
+    
+    </div>
+    <select id="task-select" name="tasks"></select>
+    <h2 id='task-name'>No Task Selected</h2>
     <section id='board-save-clear'>
         <h2 id="save-board">Save Task</h2>
         <h2 id='save-board-subtasks'>Save Subtasks</h2>
@@ -70,14 +74,14 @@
         <div class='row'>
             <div class='column'>
                 <div class='c1' data-draggable="target">
-                    <h3>column one</h3>
+                    <h3>Not Started</h3>
                     <ul id='task-list'></ul>
 
                 </div>
             </div>
             <div class='column'>
                 <div class='c2' data-draggable="target">
-                    <h3>column two</h3>
+                    <h3>In Progress</h3>
                     <ul>
                         
                     </ul>
@@ -85,7 +89,7 @@
             </div>
             <div class='column'>
                 <div class='c3' data-draggable="target">
-                    <h3>column three</h3>
+                    <h3>Complete</h3>
                     <ul>
                         
                     </ul>
