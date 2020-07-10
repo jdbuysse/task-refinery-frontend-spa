@@ -4,9 +4,9 @@ Task Refinery is a lightweight, Kanban-style tool for tracking progress on small
 ![Demo image](/TaskRefinery.PNG)
 
 I designed this as a modularized, vanilla javascript app I wrote as I learned:
-	*Django REST framework
-	*JWT auth and custom permissions
-	*Async/Await fetch requests
-	*SPA design (refactored from a multipage design to what you see here)
-	*Flexbox
-	*Localstorage api
+	* Django REST framework
+	* JWT auth and custom permissions
+	* Async/Await fetch requests
+	* SPA design (refactored from a multipage design to what you see here)
+	* Flexbox
+	* Localstorage api
